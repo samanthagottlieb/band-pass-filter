@@ -2,6 +2,8 @@ def music_filter(music_track, low_pass, high_pass)
   filtered_track = []
   
   music_track.each do |freq|
+    raise "this music track is corrupted" if freq == nil
+    
     if freq < low_pass
       freq = low_pass
     elsif freq > high_pass

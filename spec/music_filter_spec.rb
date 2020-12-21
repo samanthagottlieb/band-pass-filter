@@ -16,4 +16,10 @@ describe 'music_filter' do
       expect(music_filter([20, 40, 60], 20, 50)).to eq([20, 40, 50])
     end
   end
+
+  context 'when passed an array including nil' do
+    it 'raises an error' do
+      expect{ music_filter([20, 40, nil], 30, 50) }.to raise_error("this music track is corrupted")
+    end
+  end
 end

@@ -1,4 +1,4 @@
-def music_filter(music_track, low_pass, high_pass)
+def music_filter(music_track, low_pass = 40, high_pass = 1000)
   filtered_track = []
   corrupted_music_error = 'this music track is corrupted'
 

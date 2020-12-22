@@ -30,4 +30,10 @@ describe 'music_filter' do
       expect{ music_filter([], 30, 50) }.to raise_error('this music track is corrupted')
     end
   end
+
+  context 'when no low and high pass filters are given' do
+    it 'sets the filters to the default values 40 and 1000' do
+      expect(music_filter([20, 40, 1020])).to eq([40, 40, 1000])
+    end
+  end
 end

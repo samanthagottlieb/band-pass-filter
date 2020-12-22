@@ -19,7 +19,13 @@ describe 'music_filter' do
 
   context 'when passed an array including nil' do
     it 'raises an error' do
-      expect{ music_filter([20, 40, nil], 30, 50) }.to raise_error("this music track is corrupted")
+      expect{ music_filter([20, 40, nil], 30, 50) }.to raise_error('this music track is corrupted')
+    end
+  end
+
+  context 'when passed an empty array' do
+    it 'raises an error' do
+      expect{ music_filter([], 30, 50) }.to raise_error('this music track is corrupted')
     end
   end
 end

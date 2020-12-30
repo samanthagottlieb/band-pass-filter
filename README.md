@@ -10,6 +10,7 @@ Company makes digital audio workstation plugins
 Input: array of integers representing frequency, low pass filter, high pass filter
 Output: array of integers - below low pass filter set to low integer & above high pass filter set to high figure
 
+```
 INPUT                                 | OUTPUT
 [10, 20, 30, 40, 50, 60, 70], 30, 60  | [30, 30, 30, 40, 50, 60, 60]
 [20, 40, 60], 20, 60                  | [20, 40, 60]
@@ -18,3 +19,4 @@ INPUT                                 | OUTPUT
 [20, 40, 60], 30, 50                  | [30, 40, 50]
 [20, 40, nil], 30, 50                 | throw an error
 []                                    | throw an error
+```
